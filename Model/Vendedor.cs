@@ -13,7 +13,7 @@ namespace Model
 		private string apellido;
 		private int tiendaId;
 
-		public Vendedor(int id, string nombre, string apellido, int tiendaId)
+		public Vendedor(string nombre, string apellido, int tiendaId)
 		{
 			this.Id = id;
 			this.Nombre = nombre;
