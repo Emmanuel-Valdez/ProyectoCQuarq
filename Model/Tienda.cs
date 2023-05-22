@@ -8,7 +8,7 @@ namespace Model
 {
 	internal class Tienda
 	{
-		private int id;
+		private static int ultimoId = 0;
 		private string nombre;
 		private string direccion;
 		private List<Prenda> stock;
@@ -18,9 +18,11 @@ namespace Model
 			this.Nombre = nombre;
 			this.Direccion = direccion;
 			this.Stock = stock;
+			ultimoId++;
+			Id = ultimoId;
 		}
 
-		public int Id { get => id; set => id = value; }
+		public int Id { get; private set; }
 		public string Nombre { get => nombre; set => nombre = value; }
 		public string Direccion { get => direccion; set => direccion = value; }
 		public List<Prenda> Stock { get => stock; set => stock = value; }

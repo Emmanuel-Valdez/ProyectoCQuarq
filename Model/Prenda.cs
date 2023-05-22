@@ -8,6 +8,7 @@ namespace Model
 {
 	abstract class Prenda
 	{
+
 		private string calidad;
 		private int cantidad;
 		private static int ultimoId = 0;

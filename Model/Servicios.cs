@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,8 @@ namespace Model
 {
 	internal class Servicios
 	{
+		private Tienda T1;
+		private Vendedor V1;
 		public static List<Prenda> PedidoAFabrica()
 		{
 
@@ -40,16 +43,17 @@ namespace Model
 
 			return ListaPedido;
 		}
-		public static Tienda NuevaTienda()
+		public void TiendaPrueba()
 		{
-			Tienda T1 = new Tienda("Ukiyo", "Falsa123", PedidoAFabrica());
+			 T1 = new Tienda("Ukiyo", "Falsa123", PedidoAFabrica());
+			 V1 = new Vendedor("Esteban", "Quito", T1.Id); 
+		}
 
-			return T1;
-		}
-		public static Vendedor NuevoVendedor()
+		public void Cotizar(Cotizacion C1)
 		{
-			Vendedor V1= new Vendedor()
+			
 		}
+		 
 
 	}
 }
