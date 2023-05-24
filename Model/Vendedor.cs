@@ -34,10 +34,7 @@ namespace Model
 		{
 			Prenda prendaSeleccionada = Stock[(idPrenda - 1)];
 			float precioModificado = prendaSeleccionada.PrecioPrenda(precioUnitario);
-
-
 			Cotizacion C1 =new Cotizacion(DateTime.Now, Id, idPrenda, cantidadCotizada, precioUnitario, precioModificado*cantidadCotizada );
-
 			return C1;
 		}
 	}

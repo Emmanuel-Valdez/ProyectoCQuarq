@@ -7,13 +7,18 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-	internal class Servicios
+	 public class Servicios
 	{
-		private Tienda T1;
-		private Vendedor V1;
-		public static List<Prenda> PedidoAFabrica()
-		{
+		private Tienda t1;
+		private Vendedor v1;
+		private List<Cotizacion> listaCotizaciones;
 
+		public List<Cotizacion> ListaCotizaciones { get => listaCotizaciones; set => listaCotizaciones = value; }
+		internal Tienda T1 { get => t1; set => t1 = value; }
+		internal Vendedor V1 { get => v1; set => v1 = value; }
+
+		private static List<Prenda> PedidoAFabrica()
+		{
 			Camisa CCortaMaoStandar = new Camisa("Corta", "Mao", "Standard", 100);
 			Camisa CCortaMaoPremium = new Camisa("Corta", "Mao", "Premium", 100);
 			Camisa CCortaComunStandard = new Camisa("Corta", "Comun", "Standard", 150);
@@ -46,14 +51,15 @@ namespace Model
 		public void TiendaPrueba()
 		{
 			 T1 = new Tienda("Ukiyo", "Falsa123", PedidoAFabrica());
-			 V1 = new Vendedor("Esteban", "Quito", T1.Id); 
+			 V1 = new Vendedor("Esteban", "Quito", T11.Id); 
 		}
 
-		public void Cotizar(Cotizacion C1)
+		public List<Cotizacion> Cotizar(int idPrenda, int cantidadCotizada,float precioUnitario)
 		{
-			
+			Cotizacion C1 = V1.CrearCotizacion(idPrenda, cantidadCotizada, precioUnitario, T1.Stock);
+			ListaCotizaciones.Add(C1);
+			return ListaCotizaciones;
 		}
-		 
-
+		
 	}
 }

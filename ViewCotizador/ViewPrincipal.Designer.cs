@@ -1,6 +1,8 @@
-﻿namespace ViewCotizador
+﻿using Controller;
+namespace ViewCotizador
+
 {
-	partial class Form1
+	partial class ViewPrincipal
 	{
 		/// <summary>
 		///  Required designer variable.
@@ -20,6 +22,8 @@
 			base.Dispose(disposing);
 		}
 
+		
+
 		#region Windows Form Designer generated code
 
 		/// <summary>
@@ -35,11 +39,13 @@
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
-			Name = "Form1";
-			Text = "Form1";
-			Load += Form1_Load;
+			Name = "VistaPrincipal";
+			Text = "Cotizador";
+			Load += ViewPrincipal_Load;
 			ResumeLayout(false);
 		}
+
+	
 
 		#endregion
 	}
