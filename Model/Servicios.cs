@@ -51,7 +51,7 @@ namespace Model
 		public void TiendaPrueba()
 		{
 			 T1 = new Tienda("Ukiyo", "Falsa123", PedidoAFabrica());
-			 V1 = new Vendedor("Esteban", "Quito", T11.Id); 
+			 V1 = new Vendedor("Esteban", "Quito", T1.Id); 
 		}
 
 		public List<Cotizacion> Cotizar(int idPrenda, int cantidadCotizada,float precioUnitario)
