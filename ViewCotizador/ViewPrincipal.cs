@@ -12,11 +12,14 @@ namespace ViewCotizador
 		}
 		private void ViewPrincipal_Load(object sender, EventArgs e)
 		{
-
+			int idPrenda = _controller.obtenerIdPrenda("Camisa", "Standard", "Comun", "Corta", "");
+			labelStockPrenda.Text = "Unidades de stock disponibles: " + _controller.obtenerStock(idPrenda);
+			labelTitulo.Text += idPrenda.ToString();
 		}
 		public void showText(string text)
 		{
-			Console.WriteLine(text);
+			//Console.WriteLine(text);
 		}
+
 	}
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-	internal class Camisa: Prenda
+	public class Camisa: Prenda
 	{
 		private string manga;
 		private string cuello;

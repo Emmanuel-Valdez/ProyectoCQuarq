@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-	abstract class Prenda
+	public abstract class Prenda
 	{
 
 		private string calidad;
@@ -17,11 +17,12 @@ namespace Model
 
 		public Prenda()
 		{
-			ultimoId++;
 			Id = ultimoId;
+			ultimoId++;
+			
 		}
-		protected string Calidad { get => calidad; set => calidad = value; }
-		protected int Cantidad { get => cantidad; set => cantidad = value; }
+		public string Calidad { get => calidad; set => calidad = value; }
+		public int Cantidad { get => cantidad; set => cantidad = value; }
 
 		public abstract float PrecioPrenda(float precioVendedor);
 		public float FnCalidad(float precio) 

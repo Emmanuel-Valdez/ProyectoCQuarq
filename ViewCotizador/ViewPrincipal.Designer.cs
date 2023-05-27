@@ -34,7 +34,7 @@ namespace ViewCotizador
 		{
 			flowLayoutPanel1 = new FlowLayoutPanel();
 			panel1 = new Panel();
-			label1 = new Label();
+			labelTitulo = new Label();
 			panel2 = new Panel();
 			labelDireccionTienda = new Label();
 			labelNombreTienda = new Label();
@@ -48,16 +48,16 @@ namespace ViewCotizador
 			textBox2 = new TextBox();
 			textBox1 = new TextBox();
 			groupBox3 = new GroupBox();
-			radioButton4 = new RadioButton();
-			radioButton3 = new RadioButton();
+			radioPremiun = new RadioButton();
+			radioStandard = new RadioButton();
 			groupBox2 = new GroupBox();
 			labelStockPrenda = new Label();
 			groupBox1 = new GroupBox();
 			checkBox3 = new CheckBox();
 			checkBox2 = new CheckBox();
 			checkBox1 = new CheckBox();
-			radioButton2 = new RadioButton();
-			radioButton1 = new RadioButton();
+			radioPantalon = new RadioButton();
+			radioCamisa = new RadioButton();
 			panel5 = new Panel();
 			labelCotizacion = new Label();
 			buttonCotizar = new Button();
@@ -83,36 +83,36 @@ namespace ViewCotizador
 			flowLayoutPanel1.Controls.Add(panel5);
 			flowLayoutPanel1.Location = new Point(139, 12);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
-			flowLayoutPanel1.Size = new Size(506, 469);
+			flowLayoutPanel1.Size = new Size(506, 500);
 			flowLayoutPanel1.TabIndex = 0;
 			// 
 			// panel1
 			// 
 			panel1.BackColor = SystemColors.ActiveCaption;
-			panel1.Controls.Add(label1);
+			panel1.Controls.Add(labelTitulo);
 			panel1.Location = new Point(3, 3);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(502, 56);
+			panel1.Size = new Size(499, 73);
 			panel1.TabIndex = 0;
 			// 
-			// label1
+			// labelTitulo
 			// 
-			label1.AutoSize = true;
-			label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label1.Location = new Point(175, 14);
-			label1.Name = "label1";
-			label1.Size = new Size(163, 24);
-			label1.TabIndex = 0;
-			label1.Text = "Cotizador Express";
-			label1.TextAlign = ContentAlignment.MiddleCenter;
+			labelTitulo.AutoSize = true;
+			labelTitulo.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			labelTitulo.Location = new Point(175, 14);
+			labelTitulo.Name = "labelTitulo";
+			labelTitulo.Size = new Size(163, 24);
+			labelTitulo.TabIndex = 0;
+			labelTitulo.Text = "Cotizador Express";
+			labelTitulo.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel2
 			// 
 			panel2.Controls.Add(labelDireccionTienda);
 			panel2.Controls.Add(labelNombreTienda);
-			panel2.Location = new Point(3, 65);
+			panel2.Location = new Point(3, 82);
 			panel2.Name = "panel2";
-			panel2.Size = new Size(502, 33);
+			panel2.Size = new Size(502, 38);
 			panel2.TabIndex = 1;
 			// 
 			// labelDireccionTienda
@@ -137,9 +137,9 @@ namespace ViewCotizador
 			// 
 			panel3.Controls.Add(labelHistorialCotizaciones);
 			panel3.Controls.Add(labelDatosVendedor);
-			panel3.Location = new Point(3, 104);
+			panel3.Location = new Point(3, 126);
 			panel3.Name = "panel3";
-			panel3.Size = new Size(502, 39);
+			panel3.Size = new Size(502, 40);
 			panel3.TabIndex = 2;
 			// 
 			// labelHistorialCotizaciones
@@ -167,9 +167,9 @@ namespace ViewCotizador
 			panel4.Controls.Add(groupBox3);
 			panel4.Controls.Add(groupBox2);
 			panel4.Controls.Add(groupBox1);
-			panel4.Location = new Point(3, 149);
+			panel4.Location = new Point(3, 172);
 			panel4.Name = "panel4";
-			panel4.Size = new Size(502, 229);
+			panel4.Size = new Size(502, 246);
 			panel4.TabIndex = 3;
 			// 
 			// groupBox4
@@ -219,8 +219,8 @@ namespace ViewCotizador
 			// 
 			// groupBox3
 			// 
-			groupBox3.Controls.Add(radioButton4);
-			groupBox3.Controls.Add(radioButton3);
+			groupBox3.Controls.Add(radioPremiun);
+			groupBox3.Controls.Add(radioStandard);
 			groupBox3.Location = new Point(26, 142);
 			groupBox3.Name = "groupBox3";
 			groupBox3.Size = new Size(192, 67);
@@ -228,27 +228,27 @@ namespace ViewCotizador
 			groupBox3.TabStop = false;
 			groupBox3.Text = "Calidad de la prenda";
 			// 
-			// radioButton4
+			// radioPremiun
 			// 
-			radioButton4.AutoSize = true;
-			radioButton4.Location = new Point(109, 32);
-			radioButton4.Name = "radioButton4";
-			radioButton4.Size = new Size(94, 19);
-			radioButton4.TabIndex = 1;
-			radioButton4.TabStop = true;
-			radioButton4.Text = "radioButton4";
-			radioButton4.UseVisualStyleBackColor = true;
+			radioPremiun.AutoSize = true;
+			radioPremiun.Location = new Point(109, 32);
+			radioPremiun.Name = "radioPremiun";
+			radioPremiun.Size = new Size(74, 19);
+			radioPremiun.TabIndex = 1;
+			radioPremiun.Text = "Premium";
+			radioPremiun.UseVisualStyleBackColor = true;
 			// 
-			// radioButton3
+			// radioStandard
 			// 
-			radioButton3.AutoSize = true;
-			radioButton3.Location = new Point(0, 32);
-			radioButton3.Name = "radioButton3";
-			radioButton3.Size = new Size(94, 19);
-			radioButton3.TabIndex = 0;
-			radioButton3.TabStop = true;
-			radioButton3.Text = "radioButton3";
-			radioButton3.UseVisualStyleBackColor = true;
+			radioStandard.AutoSize = true;
+			radioStandard.Checked = true;
+			radioStandard.Location = new Point(0, 32);
+			radioStandard.Name = "radioStandard";
+			radioStandard.Size = new Size(72, 19);
+			radioStandard.TabIndex = 0;
+			radioStandard.TabStop = true;
+			radioStandard.Text = "Standard";
+			radioStandard.UseVisualStyleBackColor = true;
 			// 
 			// groupBox2
 			// 
@@ -273,8 +273,8 @@ namespace ViewCotizador
 			groupBox1.Controls.Add(checkBox3);
 			groupBox1.Controls.Add(checkBox2);
 			groupBox1.Controls.Add(checkBox1);
-			groupBox1.Controls.Add(radioButton2);
-			groupBox1.Controls.Add(radioButton1);
+			groupBox1.Controls.Add(radioPantalon);
+			groupBox1.Controls.Add(radioCamisa);
 			groupBox1.Location = new Point(21, 3);
 			groupBox1.Name = "groupBox1";
 			groupBox1.Size = new Size(457, 80);
@@ -285,6 +285,7 @@ namespace ViewCotizador
 			// checkBox3
 			// 
 			checkBox3.AutoSize = true;
+			checkBox3.Enabled = false;
 			checkBox3.Location = new Point(192, 56);
 			checkBox3.Name = "checkBox3";
 			checkBox3.Size = new Size(65, 19);
@@ -312,33 +313,33 @@ namespace ViewCotizador
 			checkBox1.Text = "Manga Corta";
 			checkBox1.UseVisualStyleBackColor = true;
 			// 
-			// radioButton2
+			// radioPantalon
 			// 
-			radioButton2.AutoSize = true;
-			radioButton2.Location = new Point(20, 55);
-			radioButton2.Name = "radioButton2";
-			radioButton2.Size = new Size(72, 19);
-			radioButton2.TabIndex = 1;
-			radioButton2.TabStop = true;
-			radioButton2.Text = "Pantalon";
-			radioButton2.UseVisualStyleBackColor = true;
+			radioPantalon.AutoSize = true;
+			radioPantalon.Location = new Point(20, 55);
+			radioPantalon.Name = "radioPantalon";
+			radioPantalon.Size = new Size(72, 19);
+			radioPantalon.TabIndex = 1;
+			radioPantalon.Text = "Pantalon";
+			radioPantalon.UseVisualStyleBackColor = true;
 			// 
-			// radioButton1
+			// radioCamisa
 			// 
-			radioButton1.AutoSize = true;
-			radioButton1.Location = new Point(20, 22);
-			radioButton1.Name = "radioButton1";
-			radioButton1.Size = new Size(64, 19);
-			radioButton1.TabIndex = 0;
-			radioButton1.TabStop = true;
-			radioButton1.Text = "Camisa";
-			radioButton1.UseVisualStyleBackColor = true;
+			radioCamisa.AutoSize = true;
+			radioCamisa.Checked = true;
+			radioCamisa.Location = new Point(20, 22);
+			radioCamisa.Name = "radioCamisa";
+			radioCamisa.Size = new Size(64, 19);
+			radioCamisa.TabIndex = 0;
+			radioCamisa.TabStop = true;
+			radioCamisa.Text = "Camisa";
+			radioCamisa.UseVisualStyleBackColor = true;
 			// 
 			// panel5
 			// 
 			panel5.Controls.Add(labelCotizacion);
 			panel5.Controls.Add(buttonCotizar);
-			panel5.Location = new Point(3, 384);
+			panel5.Location = new Point(3, 424);
 			panel5.Name = "panel5";
 			panel5.Size = new Size(478, 62);
 			panel5.TabIndex = 4;
@@ -405,7 +406,7 @@ namespace ViewCotizador
 		private Panel panel2;
 		private Panel panel3;
 		private Panel panel4;
-		private Label label1;
+		private Label labelTitulo;
 		private Panel panel5;
 		private Label labelDireccionTienda;
 		private Label labelNombreTienda;
@@ -418,15 +419,15 @@ namespace ViewCotizador
 		private Label labelStockPrenda;
 		private Label labelCotizacion;
 		private Button buttonCotizar;
-		private RadioButton radioButton2;
-		private RadioButton radioButton1;
+		private RadioButton radioPantalon;
+		private RadioButton radioCamisa;
 		private CheckBox checkBox3;
 		private Label label3;
 		private Label label2;
 		private TextBox textBox2;
 		private TextBox textBox1;
-		private RadioButton radioButton4;
-		private RadioButton radioButton3;
+		private RadioButton radioPremiun;
+		private RadioButton radioStandard;
 		private CheckBox checkBox2;
 		private CheckBox checkBox1;
 	}

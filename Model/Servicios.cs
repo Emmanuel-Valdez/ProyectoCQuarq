@@ -13,16 +13,20 @@ namespace Model
 		private Vendedor v1;
 		private List<Cotizacion> listaCotizaciones;
 
+		
+
 		public List<Cotizacion> ListaCotizaciones { get => listaCotizaciones; set => listaCotizaciones = value; }
-		internal Tienda T1 { get => t1; set => t1 = value; }
-		internal Vendedor V1 { get => v1; set => v1 = value; }
+		public Tienda T1 { get => t1; set => t1 = value; }
+		public Vendedor V1 { get => v1; set => v1 = value; }
+
+		
 
 		private static List<Prenda> PedidoAFabrica()
 		{
-			Camisa CCortaMaoStandar = new Camisa("Corta", "Mao", "Standard", 100);
-			Camisa CCortaMaoPremium = new Camisa("Corta", "Mao", "Premium", 100);
 			Camisa CCortaComunStandard = new Camisa("Corta", "Comun", "Standard", 150);
 			Camisa CCortaComunPremiun = new Camisa("Corta", "Comun", "Premiun", 150);
+			Camisa CCortaMaoStandar = new Camisa("Corta", "Mao", "Standard", 100);
+			Camisa CCortaMaoPremium = new Camisa("Corta", "Mao", "Premium", 100);	
 			Camisa CLargaMaoStandar = new Camisa("Larga", "Mao", "Standard", 75);
 			Camisa CLargaMaoPremium = new Camisa("Larga", "Mao", "Premium", 75);
 			Camisa CLargaComunStandard = new Camisa("Larga", "Comun", "Standard", 175);

@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-	internal class Pantalon:Prenda
+	public class Pantalon:Prenda
 	{
 		
-		private string tipo;
+		private string estilo;
 
-		public string Tipo { get => tipo; set => tipo = value; }
+		public string Estilo { get => estilo; set => estilo = value; }
 
-		public Pantalon(string tipo, string calidad, int cantidad)
+		public Pantalon(string estilo, string calidad, int cantidad)
 		{ 
-			this.Tipo = tipo;
+			this.Estilo = estilo;
 			this.Calidad = calidad;
 			this.Cantidad= cantidad;
 			
@@ -26,7 +26,7 @@ namespace Model
 		{
 
 			float precioFinal = precioVendedor;
-			if (Tipo == "chupin")
+			if (Estilo == "chupin")
 				precioFinal *= 0.88f;
 			precioFinal=FnCalidad(precioFinal);
 

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-	internal class Tienda
+	public class Tienda
 	{
 		private static int ultimoId = 0;
 		private string nombre;
 		private string direccion;
-		private List<Prenda> stock;
+		public List<Prenda> stock;
 
 		public Tienda( string nombre, string direccion, List<Prenda> stock)
 		{
