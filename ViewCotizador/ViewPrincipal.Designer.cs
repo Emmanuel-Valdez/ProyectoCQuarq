@@ -152,6 +152,7 @@ namespace ViewCotizador
 			labelHistorialCotizaciones.TabIndex = 1;
 			labelHistorialCotizaciones.TabStop = true;
 			labelHistorialCotizaciones.Text = "Historial de Cotizaciones";
+			labelHistorialCotizaciones.LinkClicked += labelHistorialCotizaciones_LinkClicked;
 			// 
 			// labelDatosVendedor
 			// 

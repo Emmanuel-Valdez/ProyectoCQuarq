@@ -25,10 +25,6 @@ namespace ViewCotizador
 			labelDireccionTienda.Text = _controller.ObtenerDireccionTienda();
 
 		}
-		public void showText(string text)
-		{
-			
-		}
 		public void DefinirPrenda()
 		{
 			if (radioCamisa.Checked == true)
@@ -130,7 +126,7 @@ namespace ViewCotizador
 		{
 			try
 			{
-				if(int.Parse(txtCantidad.Text)>0 & int.Parse(txtCantidad.Text) <= _controller.ObtenerStock(this.idPrenda) & float.Parse(txtPrecioUnitario.Text)>0)
+				if (int.Parse(txtCantidad.Text) > 0 & int.Parse(txtCantidad.Text) <= _controller.ObtenerStock(this.idPrenda) & float.Parse(txtPrecioUnitario.Text) > 0)
 				{
 					labelCotizacion.Text = "$ " + _controller.CrearCotizacion(this.idPrenda, int.Parse(txtCantidad.Text), float.Parse(txtPrecioUnitario.Text));
 				}
@@ -146,11 +142,17 @@ namespace ViewCotizador
 					}
 				}
 			}
-			catch (FormatException )
+			catch (FormatException)
 			{
 
 				MessageBox.Show("Ingrese solo numeros", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
+		}
+
+		private void labelHistorialCotizaciones_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			ViewListaCotizaciones viewListaCotizaciones = new ViewListaCotizaciones();
+			viewListaCotizaciones.Show();
 		}
 	}
 }

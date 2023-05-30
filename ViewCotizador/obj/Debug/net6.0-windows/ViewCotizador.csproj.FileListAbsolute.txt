@@ -20,3 +20,4 @@ D:\Programacion\Csharpya\Proyectos\ProyectoFinalQuarqC\ViewCotizador\obj\Debug\n
 D:\Programacion\Csharpya\Proyectos\ProyectoFinalQuarqC\ViewCotizador\obj\Debug\net6.0-windows\ViewCotizador.pdb
 D:\Programacion\Csharpya\Proyectos\ProyectoFinalQuarqC\ViewCotizador\obj\Debug\net6.0-windows\ViewCotizador.genruntimeconfig.cache
 D:\Programacion\Csharpya\Proyectos\ProyectoFinalQuarqC\ViewCotizador\obj\Debug\net6.0-windows\ref\ViewCotizador.dll
+D:\Programacion\Csharpya\Proyectos\ProyectoFinalQuarqC\ViewCotizador\obj\Debug\net6.0-windows\ViewCotizador.ViewListaCotizaciones.resources
