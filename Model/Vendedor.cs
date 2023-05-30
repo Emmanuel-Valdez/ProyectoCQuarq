@@ -32,7 +32,7 @@ namespace Model
 
 		public Cotizacion CrearCotizacion(int idPrenda, int cantidadCotizada, float precioUnitario,List<Prenda> Stock)
 		{
-			Prenda prendaSeleccionada = Stock[(idPrenda - 1)];
+			Prenda prendaSeleccionada = Stock[(idPrenda)];
 			float precioModificado = prendaSeleccionada.PrecioPrenda(precioUnitario);
 			Cotizacion C1 =new Cotizacion(DateTime.Now, Id, idPrenda, cantidadCotizada, precioUnitario, precioModificado*cantidadCotizada );
 			return C1;

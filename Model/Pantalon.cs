@@ -26,7 +26,7 @@ namespace Model
 		{
 
 			float precioFinal = precioVendedor;
-			if (Estilo == "chupin")
+			if (Estilo == "Chupin")
 				precioFinal *= 0.88f;
 			precioFinal=FnCalidad(precioFinal);
 

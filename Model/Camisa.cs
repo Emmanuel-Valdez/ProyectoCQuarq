@@ -24,10 +24,10 @@ namespace Model
 		public override float PrecioPrenda(float precioVendedor)
 		{
 			float precioFinal=precioVendedor;
-			if (manga == "corta")
+			if (manga == "Corta")
 				precioFinal *= 0.9f;
 
-			if(cuello == "mao")
+			if(cuello == "Mao")
 				precioFinal *= 1.03f;
 			
 			precioFinal = FnCalidad(precioFinal);

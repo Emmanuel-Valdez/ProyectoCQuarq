@@ -27,7 +27,7 @@ namespace Model
 		public abstract float PrecioPrenda(float precioVendedor);
 		public float FnCalidad(float precio) 
 		{
-			if (Calidad == "premium")
+			if (Calidad == "Premium")
 				precio *= 1.3f;
 			return precio;
 		}

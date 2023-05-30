@@ -45,17 +45,17 @@ namespace ViewCotizador
 			groupBox4 = new GroupBox();
 			label3 = new Label();
 			label2 = new Label();
-			textBox2 = new TextBox();
-			textBox1 = new TextBox();
+			txtCantidad = new TextBox();
+			txtPrecioUnitario = new TextBox();
 			groupBox3 = new GroupBox();
-			radioPremiun = new RadioButton();
+			radioPremium = new RadioButton();
 			radioStandard = new RadioButton();
 			groupBox2 = new GroupBox();
 			labelStockPrenda = new Label();
 			groupBox1 = new GroupBox();
-			checkBox3 = new CheckBox();
-			checkBox2 = new CheckBox();
-			checkBox1 = new CheckBox();
+			cBEstiloChupin = new CheckBox();
+			cBCuelloMao = new CheckBox();
+			cBMangaCorta = new CheckBox();
 			radioPantalon = new RadioButton();
 			radioCamisa = new RadioButton();
 			panel5 = new Panel();
@@ -118,11 +118,12 @@ namespace ViewCotizador
 			// labelDireccionTienda
 			// 
 			labelDireccionTienda.AutoSize = true;
-			labelDireccionTienda.Location = new Point(379, 14);
+			labelDireccionTienda.Location = new Point(407, 14);
 			labelDireccionTienda.Name = "labelDireccionTienda";
-			labelDireccionTienda.Size = new Size(120, 15);
+			labelDireccionTienda.Size = new Size(95, 15);
 			labelDireccionTienda.TabIndex = 1;
-			labelDireccionTienda.Text = "direccion de la tienda";
+			labelDireccionTienda.Text = "direccion  tienda";
+			labelDireccionTienda.TextAlign = ContentAlignment.MiddleRight;
 			// 
 			// labelNombreTienda
 			// 
@@ -176,8 +177,8 @@ namespace ViewCotizador
 			// 
 			groupBox4.Controls.Add(label3);
 			groupBox4.Controls.Add(label2);
-			groupBox4.Controls.Add(textBox2);
-			groupBox4.Controls.Add(textBox1);
+			groupBox4.Controls.Add(txtCantidad);
+			groupBox4.Controls.Add(txtPrecioUnitario);
 			groupBox4.Location = new Point(224, 142);
 			groupBox4.Name = "groupBox4";
 			groupBox4.Size = new Size(254, 67);
@@ -203,23 +204,23 @@ namespace ViewCotizador
 			label2.TabIndex = 2;
 			label2.Text = "$";
 			// 
-			// textBox2
+			// txtCantidad
 			// 
-			textBox2.Location = new Point(206, 38);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(48, 23);
-			textBox2.TabIndex = 1;
+			txtCantidad.Location = new Point(206, 38);
+			txtCantidad.Name = "txtCantidad";
+			txtCantidad.Size = new Size(48, 23);
+			txtCantidad.TabIndex = 1;
 			// 
-			// textBox1
+			// txtPrecioUnitario
 			// 
-			textBox1.Location = new Point(25, 38);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(77, 23);
-			textBox1.TabIndex = 0;
+			txtPrecioUnitario.Location = new Point(25, 38);
+			txtPrecioUnitario.Name = "txtPrecioUnitario";
+			txtPrecioUnitario.Size = new Size(77, 23);
+			txtPrecioUnitario.TabIndex = 0;
 			// 
 			// groupBox3
 			// 
-			groupBox3.Controls.Add(radioPremiun);
+			groupBox3.Controls.Add(radioPremium);
 			groupBox3.Controls.Add(radioStandard);
 			groupBox3.Location = new Point(26, 142);
 			groupBox3.Name = "groupBox3";
@@ -228,15 +229,16 @@ namespace ViewCotizador
 			groupBox3.TabStop = false;
 			groupBox3.Text = "Calidad de la prenda";
 			// 
-			// radioPremiun
+			// radioPremium
 			// 
-			radioPremiun.AutoSize = true;
-			radioPremiun.Location = new Point(109, 32);
-			radioPremiun.Name = "radioPremiun";
-			radioPremiun.Size = new Size(74, 19);
-			radioPremiun.TabIndex = 1;
-			radioPremiun.Text = "Premium";
-			radioPremiun.UseVisualStyleBackColor = true;
+			radioPremium.AutoSize = true;
+			radioPremium.Location = new Point(109, 32);
+			radioPremium.Name = "radioPremium";
+			radioPremium.Size = new Size(74, 19);
+			radioPremium.TabIndex = 1;
+			radioPremium.Text = "Premium";
+			radioPremium.UseVisualStyleBackColor = true;
+			radioPremium.CheckedChanged += radioPremium_CheckedChanged;
 			// 
 			// radioStandard
 			// 
@@ -249,6 +251,7 @@ namespace ViewCotizador
 			radioStandard.TabStop = true;
 			radioStandard.Text = "Standard";
 			radioStandard.UseVisualStyleBackColor = true;
+			radioStandard.CheckedChanged += radioStandard_CheckedChanged;
 			// 
 			// groupBox2
 			// 
@@ -270,9 +273,9 @@ namespace ViewCotizador
 			// 
 			// groupBox1
 			// 
-			groupBox1.Controls.Add(checkBox3);
-			groupBox1.Controls.Add(checkBox2);
-			groupBox1.Controls.Add(checkBox1);
+			groupBox1.Controls.Add(cBEstiloChupin);
+			groupBox1.Controls.Add(cBCuelloMao);
+			groupBox1.Controls.Add(cBMangaCorta);
 			groupBox1.Controls.Add(radioPantalon);
 			groupBox1.Controls.Add(radioCamisa);
 			groupBox1.Location = new Point(21, 3);
@@ -282,36 +285,39 @@ namespace ViewCotizador
 			groupBox1.TabStop = false;
 			groupBox1.Text = "Prenda";
 			// 
-			// checkBox3
+			// cBEstiloChupin
 			// 
-			checkBox3.AutoSize = true;
-			checkBox3.Enabled = false;
-			checkBox3.Location = new Point(192, 56);
-			checkBox3.Name = "checkBox3";
-			checkBox3.Size = new Size(65, 19);
-			checkBox3.TabIndex = 4;
-			checkBox3.Text = "Chupin";
-			checkBox3.UseVisualStyleBackColor = true;
+			cBEstiloChupin.AutoSize = true;
+			cBEstiloChupin.Enabled = false;
+			cBEstiloChupin.Location = new Point(192, 56);
+			cBEstiloChupin.Name = "cBEstiloChupin";
+			cBEstiloChupin.Size = new Size(65, 19);
+			cBEstiloChupin.TabIndex = 4;
+			cBEstiloChupin.Text = "Chupin";
+			cBEstiloChupin.UseVisualStyleBackColor = true;
+			cBEstiloChupin.CheckedChanged += cBEstiloChupin_CheckedChanged;
 			// 
-			// checkBox2
+			// cBCuelloMao
 			// 
-			checkBox2.AutoSize = true;
-			checkBox2.Location = new Point(318, 23);
-			checkBox2.Name = "checkBox2";
-			checkBox2.Size = new Size(87, 19);
-			checkBox2.TabIndex = 3;
-			checkBox2.Text = "Cuello Mao";
-			checkBox2.UseVisualStyleBackColor = true;
+			cBCuelloMao.AutoSize = true;
+			cBCuelloMao.Location = new Point(318, 23);
+			cBCuelloMao.Name = "cBCuelloMao";
+			cBCuelloMao.Size = new Size(87, 19);
+			cBCuelloMao.TabIndex = 3;
+			cBCuelloMao.Text = "Cuello Mao";
+			cBCuelloMao.UseVisualStyleBackColor = true;
+			cBCuelloMao.CheckedChanged += cBCuelloMao_CheckedChanged;
 			// 
-			// checkBox1
+			// cBMangaCorta
 			// 
-			checkBox1.AutoSize = true;
-			checkBox1.Location = new Point(192, 23);
-			checkBox1.Name = "checkBox1";
-			checkBox1.Size = new Size(95, 19);
-			checkBox1.TabIndex = 2;
-			checkBox1.Text = "Manga Corta";
-			checkBox1.UseVisualStyleBackColor = true;
+			cBMangaCorta.AutoSize = true;
+			cBMangaCorta.Location = new Point(192, 23);
+			cBMangaCorta.Name = "cBMangaCorta";
+			cBMangaCorta.Size = new Size(95, 19);
+			cBMangaCorta.TabIndex = 2;
+			cBMangaCorta.Text = "Manga Corta";
+			cBMangaCorta.UseVisualStyleBackColor = true;
+			cBMangaCorta.CheckedChanged += cBMangaCorta_CheckedChanged;
 			// 
 			// radioPantalon
 			// 
@@ -322,6 +328,7 @@ namespace ViewCotizador
 			radioPantalon.TabIndex = 1;
 			radioPantalon.Text = "Pantalon";
 			radioPantalon.UseVisualStyleBackColor = true;
+			radioPantalon.CheckedChanged += radioPantalon_CheckedChanged;
 			// 
 			// radioCamisa
 			// 
@@ -334,6 +341,7 @@ namespace ViewCotizador
 			radioCamisa.TabStop = true;
 			radioCamisa.Text = "Camisa";
 			radioCamisa.UseVisualStyleBackColor = true;
+			radioCamisa.CheckedChanged += radioCamisa_CheckedChanged;
 			// 
 			// panel5
 			// 
@@ -348,7 +356,7 @@ namespace ViewCotizador
 			// 
 			labelCotizacion.AutoSize = true;
 			labelCotizacion.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			labelCotizacion.Location = new Point(323, 19);
+			labelCotizacion.Location = new Point(320, 19);
 			labelCotizacion.Name = "labelCotizacion";
 			labelCotizacion.Size = new Size(155, 24);
 			labelCotizacion.TabIndex = 1;
@@ -368,6 +376,7 @@ namespace ViewCotizador
 			buttonCotizar.TabIndex = 0;
 			buttonCotizar.Text = "COTIZAR";
 			buttonCotizar.UseVisualStyleBackColor = false;
+			buttonCotizar.Click += buttonCotizar_Click;
 			// 
 			// ViewPrincipal
 			// 
@@ -421,14 +430,14 @@ namespace ViewCotizador
 		private Button buttonCotizar;
 		private RadioButton radioPantalon;
 		private RadioButton radioCamisa;
-		private CheckBox checkBox3;
+		private CheckBox cBEstiloChupin;
 		private Label label3;
 		private Label label2;
-		private TextBox textBox2;
-		private TextBox textBox1;
-		private RadioButton radioPremiun;
+		private TextBox txtCantidad;
+		private TextBox txtPrecioUnitario;
+		private RadioButton radioPremium;
 		private RadioButton radioStandard;
-		private CheckBox checkBox2;
-		private CheckBox checkBox1;
+		private CheckBox cBCuelloMao;
+		private CheckBox cBMangaCorta;
 	}
 }

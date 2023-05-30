@@ -13,12 +13,13 @@ namespace Controller
 {
 	public class ControladorVista
 	{
-		private readonly IViewPrincipal _view;
+		
 		Servicios s1 = new Servicios();  
 
-		public ControladorVista(IViewPrincipal view)
+		
+			public ControladorVista()
 		{
-			_view = view;
+		
 			s1= new Servicios();
 			IniciarPrograma();
 		}
@@ -27,14 +28,14 @@ namespace Controller
 			s1.TiendaPrueba();
 		}
 		
-		private void CrearCotizacion(int idPrenda,int cantidadCotizada, float precioUnitario)
+		public string CrearCotizacion(int idPrenda,int cantidadCotizada, float precioUnitario)
 		{
 			
-			s1.Cotizar(idPrenda, cantidadCotizada, precioUnitario);
+			return s1.Cotizar(idPrenda, cantidadCotizada, precioUnitario).ToString();
 
 			//Console.Write(s1.ListaCotizaciones[cot.Id]);
 		}
-		public int obtenerIdPrenda(string clase, string calidad, string cuello, string manga, string estilo)
+		public int ObtenerIdPrenda(string clase, string calidad, string cuello, string manga, string estilo)
 		{
 			foreach (var tipoPrenda in s1.T1.Stock)
 			{
@@ -51,11 +52,22 @@ namespace Controller
 			return 99;
 		}
 
-		public string obtenerStock(int idPrenda)
-		{ 
-			return s1.T1.Stock[idPrenda].Cantidad.ToString();
+		public int ObtenerStock(int idPrenda)
+		{
+			return s1.T1.Stock[idPrenda].Cantidad;
 		}
-
+		public string ObtenerNombreTienda()
+		{
+			return s1.T1.Nombre;
+		}
+		public string ObtenerDatosVendedor()
+		{
+			return s1.V1.Nombre + " " + s1.V1.Apellido;
+		}
+		public string ObtenerDireccionTienda()
+		{
+			return s1.T1.Direccion;
+		}
 
 	}
 }
