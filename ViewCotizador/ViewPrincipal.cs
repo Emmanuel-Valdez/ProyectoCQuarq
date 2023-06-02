@@ -3,7 +3,7 @@ namespace ViewCotizador
 {
 	public partial class ViewPrincipal : Form
 	{
-		private readonly ControladorVista _controller;
+		private readonly ControladorVistaPrincipal controller;
 		private int idPrenda;
 		private string clase;
 		private string calidad;
@@ -14,15 +14,15 @@ namespace ViewCotizador
 		public ViewPrincipal()
 		{
 			InitializeComponent();
-			_controller = new ControladorVista();
+			controller = new ControladorVistaPrincipal();
 		}
 		private void ViewPrincipal_Load(object sender, EventArgs e)
 		{
 
 			DeterminarStock();
-			labelNombreTienda.Text = _controller.ObtenerNombreTienda();
-			labelDatosVendedor.Text = _controller.ObtenerDatosVendedor();
-			labelDireccionTienda.Text = _controller.ObtenerDireccionTienda();
+			labelNombreTienda.Text = controller.ObtenerNombreTienda();
+			labelDatosVendedor.Text = controller.ObtenerDatosVendedor();
+			labelDireccionTienda.Text = controller.ObtenerDireccionTienda();
 
 		}
 		public void DefinirPrenda()
@@ -81,8 +81,8 @@ namespace ViewCotizador
 		public void DeterminarStock()
 		{
 			DefinirPrenda();
-			this.idPrenda = _controller.ObtenerIdPrenda(this.clase, this.calidad, this.cuello, this.manga, this.estilo);
-			labelStockPrenda.Text = "Unidades de stock disponibles: " + _controller.ObtenerStock(this.idPrenda);
+			this.idPrenda = controller.ObtenerIdPrenda(this.clase, this.calidad, this.cuello, this.manga, this.estilo);
+			labelStockPrenda.Text = "Unidades de stock disponibles: " + controller.ObtenerStock(this.idPrenda);
 		}
 		#region variaciones en los switchs
 		private void cBMangaCorta_CheckedChanged(object sender, EventArgs e)
@@ -126,13 +126,13 @@ namespace ViewCotizador
 		{
 			try
 			{
-				if (int.Parse(txtCantidad.Text) > 0 & int.Parse(txtCantidad.Text) <= _controller.ObtenerStock(this.idPrenda) & float.Parse(txtPrecioUnitario.Text) > 0)
+				if (int.Parse(txtCantidad.Text) > 0 & int.Parse(txtCantidad.Text) <= controller.ObtenerStock(this.idPrenda) & float.Parse(txtPrecioUnitario.Text) > 0)
 				{
-					labelCotizacion.Text = "$ " + _controller.CrearCotizacion(this.idPrenda, int.Parse(txtCantidad.Text), float.Parse(txtPrecioUnitario.Text));
+					labelCotizacion.Text = "$ " + controller.CrearCotizacion(this.idPrenda, int.Parse(txtCantidad.Text), float.Parse(txtPrecioUnitario.Text));
 				}
 				else
 				{
-					if (int.Parse(txtCantidad.Text) < 0 || int.Parse(txtCantidad.Text) > _controller.ObtenerStock(this.idPrenda))
+					if (int.Parse(txtCantidad.Text) < 0 || int.Parse(txtCantidad.Text) > controller.ObtenerStock(this.idPrenda))
 					{
 						MessageBox.Show("La cantidad cotizada debe ser mayor a 0 y hasta el maximo de unidades disponibles", "Error de cantidad", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
@@ -151,7 +151,8 @@ namespace ViewCotizador
 
 		private void labelHistorialCotizaciones_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			ViewListaCotizaciones viewListaCotizaciones = new ViewListaCotizaciones();
+			
+			ViewListaCotizaciones viewListaCotizaciones = new ViewListaCotizaciones(controller.CrearControladorVistaHistorialCotizaciones());
 			viewListaCotizaciones.Show();
 		}
 	}

@@ -23,6 +23,7 @@ namespace Model
 			this.TiendaId = tiendaId;
 			ultimoId++;
 			Id = ultimoId;
+			
 		}
 
 		public int Id { get; private set; }

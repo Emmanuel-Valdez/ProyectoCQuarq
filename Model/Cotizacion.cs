@@ -29,6 +29,7 @@ namespace Model
 			this.totalCotizacion = totalCotizacion;
 			ultimoId++;
 			Id = ultimoId;
+			
 		}
 
 		public int Id { get; private set; }

@@ -20,6 +20,7 @@ namespace Model
 			this.Stock = stock;
 			ultimoId++;
 			Id = ultimoId;
+			
 		}
 
 		public int Id { get; private set; }

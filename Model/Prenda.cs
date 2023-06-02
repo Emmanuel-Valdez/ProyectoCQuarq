@@ -17,8 +17,9 @@ namespace Model
 
 		public Prenda()
 		{
-			Id = ultimoId;
 			ultimoId++;
+			Id = ultimoId;
+			
 			
 		}
 		public string Calidad { get => calidad; set => calidad = value; }

@@ -11,13 +11,13 @@ using Model;
 
 namespace Controller
 {
-	public class ControladorVista
+	public class ControladorVistaPrincipal
 	{
 		
 		Servicios s1 = new Servicios();  
 
 		
-			public ControladorVista()
+			public ControladorVistaPrincipal()
 		{
 		
 			s1= new Servicios();
@@ -33,7 +33,7 @@ namespace Controller
 			
 			return s1.Cotizar(idPrenda, cantidadCotizada, precioUnitario).ToString();
 
-			//Console.Write(s1.ListaCotizaciones[cot.Id]);
+			
 		}
 		public int ObtenerIdPrenda(string clase, string calidad, string cuello, string manga, string estilo)
 		{
@@ -54,7 +54,7 @@ namespace Controller
 
 		public int ObtenerStock(int idPrenda)
 		{
-			return s1.T1.Stock[idPrenda].Cantidad;
+			return s1.T1.Stock[idPrenda-1].Cantidad;
 		}
 		public string ObtenerNombreTienda()
 		{
@@ -68,6 +68,12 @@ namespace Controller
 		{
 			return s1.T1.Direccion;
 		}
+		public ControladorListaCotizaciones CrearControladorVistaHistorialCotizaciones()
+		{
+			ControladorListaCotizaciones controladorListaCotizaciones = new ControladorListaCotizaciones();
+			controladorListaCotizaciones.ObtenerServicios(s1);
 
+			return controladorListaCotizaciones;
+		}
 	}
 }

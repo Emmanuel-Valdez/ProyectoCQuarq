@@ -28,12 +28,83 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "ViewListaCotizaciones";
+			dgvHistorialCotizaciones = new DataGridView();
+			Id = new DataGridViewTextBoxColumn();
+			Fecha = new DataGridViewTextBoxColumn();
+			IdVendedor = new DataGridViewTextBoxColumn();
+			idPrenda = new DataGridViewTextBoxColumn();
+			Cantidad = new DataGridViewTextBoxColumn();
+			PrecioUnitario = new DataGridViewTextBoxColumn();
+			PrecioCotizacion = new DataGridViewTextBoxColumn();
+			((System.ComponentModel.ISupportInitialize)dgvHistorialCotizaciones).BeginInit();
+			SuspendLayout();
+			// 
+			// dgvHistorialCotizaciones
+			// 
+			dgvHistorialCotizaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dgvHistorialCotizaciones.Columns.AddRange(new DataGridViewColumn[] { Id, Fecha, IdVendedor, idPrenda, Cantidad, PrecioUnitario, PrecioCotizacion });
+			dgvHistorialCotizaciones.Location = new Point(29, 108);
+			dgvHistorialCotizaciones.Name = "dgvHistorialCotizaciones";
+			dgvHistorialCotizaciones.RowTemplate.Height = 25;
+			dgvHistorialCotizaciones.Size = new Size(732, 147);
+			dgvHistorialCotizaciones.TabIndex = 0;
+			// 
+			// Id
+			// 
+			Id.HeaderText = "Id";
+			Id.Name = "Id";
+			// 
+			// Fecha
+			// 
+			Fecha.HeaderText = "Fecha";
+			Fecha.Name = "Fecha";
+			// 
+			// IdVendedor
+			// 
+			IdVendedor.HeaderText = "idVendedor";
+			IdVendedor.Name = "IdVendedor";
+			// 
+			// idPrenda
+			// 
+			idPrenda.HeaderText = "idPrenda";
+			idPrenda.Name = "idPrenda";
+			// 
+			// Cantidad
+			// 
+			Cantidad.HeaderText = "Cantidad";
+			Cantidad.Name = "Cantidad";
+			// 
+			// PrecioUnitario
+			// 
+			PrecioUnitario.HeaderText = "Precio por unidad";
+			PrecioUnitario.Name = "PrecioUnitario";
+			// 
+			// PrecioCotizacion
+			// 
+			PrecioCotizacion.HeaderText = "Precio de la cotizacion";
+			PrecioCotizacion.Name = "PrecioCotizacion";
+			// 
+			// ViewListaCotizaciones
+			// 
+			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleMode = AutoScaleMode.Font;
+			ClientSize = new Size(800, 450);
+			Controls.Add(dgvHistorialCotizaciones);
+			Name = "ViewListaCotizaciones";
+			Text = "Listado de cotizaciones";
+			((System.ComponentModel.ISupportInitialize)dgvHistorialCotizaciones).EndInit();
+			ResumeLayout(false);
 		}
 
 		#endregion
+
+		private DataGridView dgvHistorialCotizaciones;
+		private DataGridViewTextBoxColumn Id;
+		private DataGridViewTextBoxColumn Fecha;
+		private DataGridViewTextBoxColumn IdVendedor;
+		private DataGridViewTextBoxColumn idPrenda;
+		private DataGridViewTextBoxColumn Cantidad;
+		private DataGridViewTextBoxColumn PrecioUnitario;
+		private DataGridViewTextBoxColumn PrecioCotizacion;
 	}
 }
