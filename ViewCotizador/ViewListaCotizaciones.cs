@@ -23,20 +23,20 @@ namespace ViewCotizador
 
 		public void ImprimirLista()
 		{
-			
+
 			for (int i = 0; i < controller.ElementosListaCotizaciones(); i++)
 			{
 				List<string> lista = controller.EnviarCotizaciones(i);
 				dgvHistorialCotizaciones.Rows.Add();
 				for (int j = 0; j < 7; j++)
 				{
-					dgvHistorialCotizaciones.Rows[i].Cells[j].Value= lista[j];
+					dgvHistorialCotizaciones.Rows[i].Cells[j].Value = lista[j];
 				}
-				
+
 			}
 
-			
-            
+
+
 		}
 	}
 }

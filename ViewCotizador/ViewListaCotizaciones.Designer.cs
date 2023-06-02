@@ -43,16 +43,18 @@
 			// 
 			dgvHistorialCotizaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvHistorialCotizaciones.Columns.AddRange(new DataGridViewColumn[] { Id, Fecha, IdVendedor, idPrenda, Cantidad, PrecioUnitario, PrecioCotizacion });
-			dgvHistorialCotizaciones.Location = new Point(29, 108);
+			dgvHistorialCotizaciones.Location = new Point(-9, 36);
 			dgvHistorialCotizaciones.Name = "dgvHistorialCotizaciones";
 			dgvHistorialCotizaciones.RowTemplate.Height = 25;
-			dgvHistorialCotizaciones.Size = new Size(732, 147);
+			dgvHistorialCotizaciones.Size = new Size(1007, 422);
 			dgvHistorialCotizaciones.TabIndex = 0;
 			// 
 			// Id
 			// 
+			Id.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
 			Id.HeaderText = "Id";
 			Id.Name = "Id";
+			Id.Width = 42;
 			// 
 			// Fecha
 			// 
@@ -88,7 +90,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(996, 450);
 			Controls.Add(dgvHistorialCotizaciones);
 			Name = "ViewListaCotizaciones";
 			Text = "Listado de cotizaciones";

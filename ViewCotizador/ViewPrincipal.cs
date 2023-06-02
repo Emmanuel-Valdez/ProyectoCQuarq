@@ -129,6 +129,8 @@ namespace ViewCotizador
 				if (int.Parse(txtCantidad.Text) > 0 & int.Parse(txtCantidad.Text) <= controller.ObtenerStock(this.idPrenda) & float.Parse(txtPrecioUnitario.Text) > 0)
 				{
 					labelCotizacion.Text = "$ " + controller.CrearCotizacion(this.idPrenda, int.Parse(txtCantidad.Text), float.Parse(txtPrecioUnitario.Text));
+					txtCantidad.Text = "";
+					txtPrecioUnitario.Text = "";
 				}
 				else
 				{

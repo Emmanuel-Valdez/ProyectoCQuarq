@@ -28,6 +28,7 @@ namespace Controller
 
 			listaParaView.Add( s1.ListaCotizaciones[n].Id.ToString());
 			listaParaView.Add(s1.ListaCotizaciones[n].Fecha.ToString());
+
 			listaParaView.Add(s1.ListaCotizaciones[n].IdVendedor.ToString());
 			listaParaView.Add(s1.ListaCotizaciones[n].PrendaId.ToString());
 			listaParaView.Add(s1.ListaCotizaciones[n].Cantidad.ToString());
