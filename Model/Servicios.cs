@@ -54,7 +54,7 @@ namespace Model
 		}
 		public void TiendaPrueba()
 		{
-			 T1 = new Tienda("Ukiyo", "Falsa123", PedidoAFabrica());
+			 T1 = new Tienda("Ukiyo", "Falsa 123", PedidoAFabrica());
 			 V1 = new Vendedor("Esteban", "Quito", T1.Id); 
 			ListaCotizaciones = new List<Cotizacion>();
 		}

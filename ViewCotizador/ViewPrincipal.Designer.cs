@@ -98,16 +98,18 @@ namespace ViewCotizador
 			// labelTitulo
 			// 
 			labelTitulo.AutoSize = true;
-			labelTitulo.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			labelTitulo.Location = new Point(175, 14);
+			labelTitulo.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
+			labelTitulo.ForeColor = SystemColors.ControlLightLight;
+			labelTitulo.Location = new Point(152, 17);
 			labelTitulo.Name = "labelTitulo";
-			labelTitulo.Size = new Size(163, 24);
+			labelTitulo.Size = new Size(209, 29);
 			labelTitulo.TabIndex = 0;
 			labelTitulo.Text = "Cotizador Express";
 			labelTitulo.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel2
 			// 
+			panel2.BackColor = SystemColors.ActiveBorder;
 			panel2.Controls.Add(labelDireccionTienda);
 			panel2.Controls.Add(labelNombreTienda);
 			panel2.Location = new Point(3, 82);
@@ -136,6 +138,7 @@ namespace ViewCotizador
 			// 
 			// panel3
 			// 
+			panel3.BackColor = SystemColors.ActiveBorder;
 			panel3.Controls.Add(labelHistorialCotizaciones);
 			panel3.Controls.Add(labelDatosVendedor);
 			panel3.Location = new Point(3, 126);
@@ -350,7 +353,7 @@ namespace ViewCotizador
 			panel5.Controls.Add(buttonCotizar);
 			panel5.Location = new Point(3, 424);
 			panel5.Name = "panel5";
-			panel5.Size = new Size(478, 62);
+			panel5.Size = new Size(499, 62);
 			panel5.TabIndex = 4;
 			// 
 			// labelCotizacion

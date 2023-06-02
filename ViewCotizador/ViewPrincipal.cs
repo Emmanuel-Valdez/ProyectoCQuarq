@@ -20,8 +20,8 @@ namespace ViewCotizador
 		{
 
 			DeterminarStock();
-			labelNombreTienda.Text = controller.ObtenerNombreTienda();
-			labelDatosVendedor.Text = controller.ObtenerDatosVendedor();
+			labelNombreTienda.Text ="Tienda: " +  controller.ObtenerNombreTienda();
+			labelDatosVendedor.Text = "Vendedor:" +  controller.ObtenerDatosVendedor();
 			labelDireccionTienda.Text = controller.ObtenerDireccionTienda();
 
 		}
@@ -153,7 +153,7 @@ namespace ViewCotizador
 
 		private void labelHistorialCotizaciones_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			
+
 			ViewListaCotizaciones viewListaCotizaciones = new ViewListaCotizaciones(controller.CrearControladorVistaHistorialCotizaciones());
 			viewListaCotizaciones.Show();
 		}
