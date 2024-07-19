@@ -1,4 +1,4 @@
-# ProyectoCQuarq
+# ProyectoC Quarq
 Proyecto final en C#, quark academy
 
 proyecto de aplicacion de windows forms consistente en un cotizador de una tienda de ropa, realizado en C# utilizando Modelo vista controlador
